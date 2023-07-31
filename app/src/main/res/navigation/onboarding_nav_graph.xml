@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_nav_graph"
+    app:startDestination="@id/fragment_register">
+    <fragment
+        android:id="@+id/fragment_register"
+        android:name="com.example.dynamic_appointment_application.ui.onboarding.RegisterScreenFragment"
+        tools:layout="@layout/fragment_register_screen"
+        ></fragment>
+</navigation>

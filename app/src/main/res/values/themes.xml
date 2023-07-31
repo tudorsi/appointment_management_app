@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Dynamic_appointment_application" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/primary_purple</item>
+    </style>
+
+    <style name="Theme.Dynamic_appointment_application" parent="Base.Theme.Dynamic_appointment_application" />
+
+    <style name="Button.Primary" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="cornerRadius">@dimen/radius_s</item>
+        <item name="android:minHeight">@dimen/primary_button_height</item>
+
+    </style>
+
+    <style name="Button.Primary.Purple" parent="Button.Primary">
+        <item name="background">@color/primary_purple</item>
+    </style>
+
+</resources>

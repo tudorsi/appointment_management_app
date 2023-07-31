@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_l">30dp</dimen>
+    <dimen name="margin_m">20dp</dimen>
+    <dimen name="radius_m">20dp</dimen>
+    <dimen name="radius_l">30dp</dimen>
+    <dimen name="primary_button_height">60dp</dimen>
+    <dimen name="margin_xl">40dp</dimen>
+    <dimen name="radius_xs">5dp</dimen>
+    <dimen name="radius_s">10dp</dimen>
+</resources>
