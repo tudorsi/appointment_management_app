@@ -1,3 +1,5 @@
+package com.example.dynamic_appointment_application.base
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,11 +21,11 @@ abstract class BaseFragment<B : ViewBinding>(val viewBinder: (LayoutInflater) ->
 
     private var toast: Toast? = null
 
-    companion object {
-        private const val PROGRESS = "Progress"
-    }
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return viewBinder(inflater).let {
             binding = it
             it.root
@@ -54,7 +56,8 @@ abstract class BaseFragment<B : ViewBinding>(val viewBinder: (LayoutInflater) ->
                 Toast.LENGTH_SHORT
             ).show()
         } else {
-            val destinationId = findNavController().currentDestination?.getAction(actionId)?.destinationId
+            val destinationId =
+                findNavController().currentDestination?.getAction(actionId)?.destinationId
 
             findNavController().currentDestination?.let { node ->
                 val currentNode = when (node) {

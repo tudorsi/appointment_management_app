@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_alabaster">
+
+    <ImageView
+        android:id="@+id/star_image_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="@dimen/margin_m"
+        android:adjustViewBounds="true"
+        android:src="@drawable/material_star"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#B2FFA8" />
+
+    <com.example.dynamic_appointment_application.components.MontsseratBlackTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:alpha="0.6"
+        android:text="@string/welcome_message"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/star_image_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/star_image_view"
+        app:layout_constraintTop_toTopOf="@id/star_image_view" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/email_edit_text"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_l"
+        android:layout_marginTop="@dimen/margin_xl"
+        android:hint="@string/e_mail_edit_text_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/star_image_view" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/password_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_l"
+        android:layout_marginTop="@dimen/margin_l"
+        android:hint="@string/password_edit_text_hint"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_edit_text"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_button"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="@dimen/margin_l"
+        android:layout_marginBottom="@dimen/margin_l"
+        android:backgroundTint="#B2FFA8"
+        android:elevation="0dp"
+        android:text="@string/login_button_text"
+        android:textAllCaps="false"
+        android:textColor="#476643"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/radius_l"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

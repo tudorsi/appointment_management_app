@@ -114,6 +114,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/password_input_layout" />
 
+        <TextView
+            android:id="@+id/go_to_login_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/register_buton"
+            android:text="Already have an account? Login"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/margin_l" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

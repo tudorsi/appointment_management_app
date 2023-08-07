@@ -7,6 +7,13 @@
     <fragment
         android:id="@+id/fragment_register"
         android:name="com.example.dynamic_appointment_application.ui.onboarding.RegisterScreenFragment"
-        tools:layout="@layout/fragment_register_screen"
-        ></fragment>
+        tools:layout="@layout/fragment_register_screen">
+        <action
+            android:id="@+id/action_fragment_register_to_fragment_login"
+            app:destination="@id/fragment_login" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.example.dynamic_appointment_application.ui.login.LoginFragment"
+        tools:layout="@layout/fragment_login"></fragment>
 </navigation>
