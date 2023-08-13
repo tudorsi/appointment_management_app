@@ -15,5 +15,14 @@
     <fragment
         android:id="@+id/fragment_login"
         android:name="com.example.dynamic_appointment_application.ui.login.LoginFragment"
-        tools:layout="@layout/fragment_login"></fragment>
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_fragment_login_to_fragment_dashboard"
+            app:destination="@id/fragment_dashboard" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_dashboard"
+        android:name="com.example.dynamic_appointment_application.ui.dashboard.DashboardFragment"
+        tools:layout="@layout/fragment_dashboard"></fragment>
 </navigation>

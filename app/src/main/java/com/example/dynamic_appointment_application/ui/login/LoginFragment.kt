@@ -13,6 +13,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
         setStatusBarColor(R.color.primary_alabaster, true)
         loginViewModel.loginStatusLiveData.observe(viewLifecycleOwner) {
             showToast(it.toString())
+            navigate(R.id.action_fragment_login_to_fragment_dashboard)
         }
         loginButton.setOnClickListener {
             loginViewModel.login(
