@@ -4,6 +4,7 @@ import com.example.dynamic_appointment_application.Network.ApiServiceProvider
 import com.example.dynamic_appointment_application.Network.NetworkExceptionHandler
 import com.example.dynamic_appointment_application.Network.NetworkNotAvailableInterceptor
 import com.example.dynamic_appointment_application.Network.RemoteServicesHandler
+import com.example.dynamic_appointment_application.ui.dashboard.DashboardViewModel
 import com.example.dynamic_appointment_application.ui.login.LoginViewModel
 import okhttp3.OkHttpClient
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -12,6 +13,7 @@ import java.util.concurrent.TimeUnit
 
 val repositoryModule = module {
     single { UserRepository(get(), get()) }
+    single { AppointmentServiceRepository(get(), get()) }
 }
 
 val utilsModule = module {
@@ -23,10 +25,12 @@ val utilsModule = module {
 
 val viewModelModule = module {
     viewModel { LoginViewModel(get()) }
+    viewModel { DashboardViewModel(get()) }
 }
 
 val useCaseModule = module {
     single { LoginUseCase(get()) }
+    single { GetServicesUseCase(get()) }
 }
 
 fun provideOkHttpBuilder(): OkHttpClient.Builder {
