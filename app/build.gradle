@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 android {
@@ -56,5 +57,7 @@ dependencies {
 
     //Koin
     implementation "io.insert-koin:koin-android:3.0.2"
+
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
 
 }

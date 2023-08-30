@@ -9,4 +9,12 @@
     <dimen name="radius_xs">5dp</dimen>
     <dimen name="radius_s">10dp</dimen>
     <dimen name="margin_s">10dp</dimen>
+    <dimen name="text_17sp">17sp</dimen>
+    <dimen name="margin_xs">5dp</dimen>
+    <dimen name="text_24sp">24</dimen>
+    <dimen name="margin_xxl">50dp</dimen>
+    <dimen name="margin_xxxl">60dp</dimen>
+    <dimen name="text_36sp">36sp</dimen>
+    <dimen name="margin_xl_xxl">45dp</dimen>
+    <dimen name="margin_l_xl">35dp</dimen>
 </resources>

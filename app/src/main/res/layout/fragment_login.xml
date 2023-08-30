@@ -15,7 +15,7 @@
         android:src="@drawable/material_star"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="#B2FFA8" />
+        app:tint="@color/primary_accent_green" />
 
     <com.example.dynamic_appointment_application.components.MontsseratBlackTextView
         android:layout_width="0dp"
@@ -62,12 +62,12 @@
         android:layout_height="60dp"
         android:layout_marginHorizontal="@dimen/margin_l"
         android:layout_marginBottom="@dimen/margin_l"
-        android:backgroundTint="#B2FFA8"
+        android:backgroundTint="@color/primary_accent_green"
         android:elevation="0dp"
         android:text="@string/login_button_text"
         android:textAllCaps="false"
-        android:textColor="#476643"
-        android:textSize="16sp"
+        android:textColor="@color/green_button_text_color"
+        android:textSize="@dimen/text_17sp"
         android:textStyle="bold"
         app:cornerRadius="@dimen/radius_l"
         app:layout_constraintBottom_toBottomOf="parent"

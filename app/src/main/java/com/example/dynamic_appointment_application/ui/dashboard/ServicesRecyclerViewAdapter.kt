@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dynamic_appointment_application.databinding.ViewHolderServiceItemBinding
 import com.example.dynamic_appointment_application.models.ServiceModel
 
-class ServicesRecyclerViewAdapter(private var items: List<ServiceModel>) :
+class ServicesRecyclerViewAdapter(
+    private var items: List<ServiceModel>,
+    private val onItemClickListener: (item: ServiceModel) -> Unit
+) :
     RecyclerView.Adapter<ServicesRecyclerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ServicesRecyclerViewHolder {
         return ServicesRecyclerViewHolder(
@@ -24,6 +27,9 @@ class ServicesRecyclerViewAdapter(private var items: List<ServiceModel>) :
 
     override fun onBindViewHolder(holder: ServicesRecyclerViewHolder, position: Int) {
         holder.bindData(items[position])
+        holder.itemView.setOnClickListener {
+            onItemClickListener.invoke(items[position])
+        }
     }
 
     fun updateData(items: List<ServiceModel>) {

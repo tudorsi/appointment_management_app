@@ -4,7 +4,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-private const val BASE_URL = "http://192.168.0.31:8090/"
+private const val BASE_URL = "http://192.168.1.144:8090/"
 
 class ApiServiceProvider(private val okHttpClient: OkHttpClient) {
 

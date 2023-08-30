@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/google_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/businesses_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        map:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/margin_s"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/header_bar_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/header_card" />
+
+    <com.example.dynamic_appointment_application.components.MontsseratBlackTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/margin_xl"
+        map:layout_constraintTop_toTopOf="@id/header_bar_image_view"
+        map:layout_constraintBottom_toBottomOf="@id/header_bar_image_view"
+        android:textSize="@dimen/text_17sp"
+        android:text="@string/select_business_header_text"
+        android:gravity="center" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

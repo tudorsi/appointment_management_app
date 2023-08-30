@@ -5,6 +5,8 @@ import com.example.dynamic_appointment_application.Network.NetworkExceptionHandl
 import com.example.dynamic_appointment_application.Network.NetworkNotAvailableInterceptor
 import com.example.dynamic_appointment_application.Network.RemoteServicesHandler
 import com.example.dynamic_appointment_application.ui.dashboard.DashboardViewModel
+import com.example.dynamic_appointment_application.ui.dashboard.SelectBusinessViewModel
+import com.example.dynamic_appointment_application.ui.dashboard.SelectProfessionalViewModel
 import com.example.dynamic_appointment_application.ui.login.LoginViewModel
 import okhttp3.OkHttpClient
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -14,6 +16,8 @@ import java.util.concurrent.TimeUnit
 val repositoryModule = module {
     single { UserRepository(get(), get()) }
     single { AppointmentServiceRepository(get(), get()) }
+    single { BusinessRepository(get(), get()) }
+    single { ProfessionalsRepository(get(), get()) }
 }
 
 val utilsModule = module {
@@ -26,11 +30,15 @@ val utilsModule = module {
 val viewModelModule = module {
     viewModel { LoginViewModel(get()) }
     viewModel { DashboardViewModel(get()) }
+    viewModel { SelectBusinessViewModel(get()) }
+    viewModel { SelectProfessionalViewModel(get()) }
 }
 
 val useCaseModule = module {
     single { LoginUseCase(get()) }
     single { GetServicesUseCase(get()) }
+    single { GetBusinessesUseCase(get()) }
+    single { GetProfessionalsUseCase(get()) }
 }
 
 fun provideOkHttpBuilder(): OkHttpClient.Builder {
